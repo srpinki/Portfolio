@@ -12,9 +12,9 @@ import { PiBowlSteamBold } from "react-icons/pi";
 
 const About = () => {
   return (
-    <section id="about" className="pt-16 pb-16 text-gray-300 bg-[#151d2c]">
+    <section id="about" className=" pt-16 pb-16 text-gray-300 bg-[#151d2c]">
       <div className="w-11/12 mx-auto">
-        <h2 className="text-4xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+        <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
           About <span>Me</span>
         </h2>
         <div className="mx-auto mt-2 h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>

@@ -38,8 +38,8 @@ const Navbar = () => {
   return (
     <nav className={`fixed top-0 left-0 w-full z-50 py-6 backdrop-blur-md transition-colors duration-300 ${scrolled ? 'bg-[#111827]' : 'bg-transparent'}`}>
       <div className="flex justify-between items-center w-11/12 mx-auto">
-        <div className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform cursor-pointer">
-          Pinki Biswas
+        <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform cursor-pointer">
+        <a href="/">Pinki Biswas</a> 
         </div>
 
         {/* Desktop Menu */}

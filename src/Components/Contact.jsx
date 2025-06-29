@@ -7,9 +7,9 @@ import {
 
 const Contact = () => {
   return (
-    <section className="bg-[#111827] text-white py-16">
+    <section id="contact" className="bg-[#111827] text-white py-16">
       <div>
-          <h2 className="text-4xl md:text-6xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Let's Work Together
           </h2>
           <div className="mx-auto mt-2 h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
@@ -38,7 +38,7 @@ const Contact = () => {
               </div>
               <div>
                 <p className="text-sm text-gray-400">Email</p>
-                <p>pinki.biswas@example.com</p>
+                <p>pinkibiswasit@gmail.com</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
@@ -46,8 +46,8 @@ const Contact = () => {
                 <FaPhoneAlt size={25}/>
               </div>
               <div>
-                <p className="text-sm text-gray-400">Phone</p>
-                <p>+1 (555) 123-4567</p>
+                <p className="text-sm text-gray-400">Whats app</p>
+                <p>+88 01766745260</p>
               </div>
             </div>
             <div className="flex items-center gap-4">
