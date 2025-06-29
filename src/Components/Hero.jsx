@@ -24,7 +24,7 @@ const Hero = () => {
       className="relative min-h-screen  overflow-hidden w-full inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/30"
     >
       {/* Hero Section */}
-      <div className="flex flex-col-reverse md:flex-row justify-center items-center pt-24 w-11/12 mx-auto">
+      <div id="home" className="flex flex-col-reverse md:flex-row justify-center items-center pt-24 w-11/12 mx-auto">
         {/* Text Section */}
         <div className="flex-1 text-left">
           <h1 className="text-5xl md:text-7xl font-bold leading-tight">
@@ -56,13 +56,15 @@ const Hero = () => {
             <button className="btn btn-primary bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full px-6 py-2 flex items-center gap-2">
               <FaDownload /> Download Resume
             </button>
-            <button className="btn btn-outline border-white text-white hover:bg-white hover:text-black rounded-full px-6 py-2">
-              View My Work
-            </button>
+            <a href="#projects">
+              <button className="btn btn-outline border-white text-white hover:bg-white hover:text-black rounded-full px-6 py-2">
+                View My Work
+              </button>
+            </a>
           </div>
 
           {/* Social Icons */}
-          <div className="mt-10 flex gap-4 text-xl text-gray-300">
+          <div className="mt-10 flex gap-4 text-xl text-gray-300 mb-5">
             <a
               className="cursor-pointer w-12 h-12 bg-gray-800/50 hover:bg-blue-500/20 border border-gray-700 hover:border-blue-400 rounded-full flex items-center justify-center text-gray-400 hover:text-blue-400 transition-all duration-300 hover:scale-110 group"
               href="https://github.com/srpinki"
@@ -90,7 +92,7 @@ const Hero = () => {
           </div>
 
           {/* Scroll Down Indicator */}
-          <div className="mt-10 text-center text-sm text-blue-300 absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="mt-10 text-center text-sm text-blue-300 absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
             Scroll Down
             <div className="animate-bounce text-blue-300 flex items-center justify-center mt-5 ">
               <FaChevronDown size={25} />

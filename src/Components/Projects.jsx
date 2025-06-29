@@ -44,7 +44,7 @@ const Projects = () => {
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
       id="projects"
-      className="bg-[#18212F] text-white py-16"
+      className="bg-[#18212F] text-white py-16 scroll-mt-22"
     >
       <div className="w-11/12 mx-auto text-center">
         <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">

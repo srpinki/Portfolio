@@ -44,7 +44,7 @@ const Navbar = () => {
 
         {/* Desktop Menu */}
         <div className="space-x-6 hidden md:flex">
-          <a href="" className={getLinkClass("home")}>Home</a>
+          <a href="#" className={getLinkClass("home")}>Home</a>
           <a href="#about" className={getLinkClass("about")}>About</a>
           <a href="#skills" className={getLinkClass("skills")}>Skills</a>
           <a href="#projects" className={getLinkClass("projects")}>Projects</a>

@@ -17,7 +17,7 @@ const Contact = () => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-    id="contact" className="bg-[#111827] text-white py-16">
+    id="contact" className="scroll-mt-22 bg-[#111827] text-white py-16">
       <div>
           <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Let's Work Together
