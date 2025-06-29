@@ -1,18 +1,29 @@
+import { motion } from "framer-motion";
 import React from "react";
 import {
   FaCode,
   FaHeart,
   FaGamepad,
-  FaLightbulb,
   FaUserSecret,
-  FaPaintBrush,
 } from "react-icons/fa";
 import { MdEmojiObjects } from "react-icons/md";
 import { PiBowlSteamBold } from "react-icons/pi";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const About = () => {
   return (
-    <section id="about" className=" pt-16 pb-16 text-gray-300 bg-[#151d2c]">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+      id="about"
+      className=" pt-16 pb-16 text-gray-300 bg-[#151d2c]"
+    >
       <div className="w-11/12 mx-auto">
         <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
           About <span>Me</span>
@@ -36,7 +47,11 @@ const About = () => {
                 code could bring ideas to life on the screen.
               </p>
               <p className="mt-2 text-gray-400">
-                I'm also comfortable behind the scenes with Firebase, Node.js and mongoDB allowing me to bring full-stack ideas to life when needed. Whether it’s a landing page or a dynamic web app, I build with scalability, speed, and user experience in mind.  I enjoy turning ideas into real-world solutions.
+                I'm also comfortable behind the scenes with Firebase, Node.js
+                and mongoDB allowing me to bring full-stack ideas to life when
+                needed. Whether it’s a landing page or a dynamic web app, I
+                build with scalability, speed, and user experience in mind. I
+                enjoy turning ideas into real-world solutions.
               </p>
             </div>
 
@@ -66,7 +81,9 @@ const About = () => {
                 <FaGamepad /> Beyond the Code
               </h3>
               <p className="mt-2 text-gray-400">
-                When I'm not coding, I'm probably dabbling with side projects, learning something new in technology, or just enjoying a cup of coffee.
+                When I'm not coding, I'm probably dabbling with side projects,
+                learning something new in technology, or just enjoying a cup of
+                coffee.
               </p>
             </div>
           </div>
@@ -124,7 +141,7 @@ const About = () => {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -7,10 +7,22 @@ import {
 } from "react-icons/fa";
 import Navbar from "./Navbar";
 import { Typewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen  overflow-hidden w-full inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/30">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+      className="relative min-h-screen  overflow-hidden w-full inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/30"
+    >
       {/* Hero Section */}
       <div className="flex flex-col-reverse md:flex-row justify-center items-center pt-24 w-11/12 mx-auto">
         {/* Text Section */}
@@ -107,7 +119,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

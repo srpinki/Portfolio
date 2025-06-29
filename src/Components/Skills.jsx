@@ -30,9 +30,21 @@ const technologies = [
   { name: "Firebase", color: "text-orange-400" },
 ];
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
 const Skills = () => {
   return (
-    <section id="skills" className="bg-[#0d0f1a] text-white py-16 px-6">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+      id="skills"
+      className="bg-[#0d0f1a] text-white py-16 px-6"
+    >
       <div className="w-11/12 mx-auto text-center">
         <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
           Skills & Expertise
@@ -133,7 +145,7 @@ const Skills = () => {
           </div>
         </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

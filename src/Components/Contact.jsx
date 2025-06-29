@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import {
   FaEnvelope,
   FaPhoneAlt,
@@ -5,9 +6,18 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 
+const fadeInUp = {
+  hidden: { opacity: 0, y: 40 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
 const Contact = () => {
   return (
-    <section id="contact" className="bg-[#111827] text-white py-16">
+    <motion.section
+    initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={fadeInUp}
+    id="contact" className="bg-[#111827] text-white py-16">
       <div>
           <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
             Let's Work Together
@@ -95,7 +105,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
