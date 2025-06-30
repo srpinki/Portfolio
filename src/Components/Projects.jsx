@@ -1,107 +1,119 @@
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Navigation } from "swiper/modules";
+import {
+  FaExternalLinkAlt,
+  FaChevronLeft,
+  FaChevronRight,
+  FaEye,
+} from "react-icons/fa";
 import { motion } from "framer-motion";
-import { FaCode, FaExternalLinkAlt } from "react-icons/fa";
 
-const projects = [
-  {
-    title: "Plant management web application",
-    description:
-      "A full-stack plant management web application  that allows users to log, track, and manage care tasks for their houseplants. Users can add their plants, log watering/fertilizing dates, set reminders, and track plant health. The platform will support user authentication and personal plant data management. ",
-    image: "https://via.placeholder.com/400x200", // Replace with real image URLs
-    stack: [
-      "React",
-      "Daisy Ui",
-      "Firebase",
-      "Node.js",
-      "Express js",
-      "MongoDB",
-    ],
-    tag: "Full-Stack",
-    codeUrl: "https://github.com/srpinki/plantera-client",
-    liveUrl: "https://elaborate-twilight-a1f44d.netlify.app/",
-  },
-  {
-    title: "Task Management App",
-    description:
-      "A responsive web application for project management with drag-and-drop functionality, real-time updates, and team collaboration features.",
-    image: "https://via.placeholder.com/400x200", // Replace with real image URLs
-    stack: ["React", "Firebase", "Tailwind CSS", "Framer Motion"],
-    tag: "Frontend",
-    codeUrl: "#",
-    liveUrl: "#",
-  },
-];
+import "swiper/css";
+import "swiper/css/navigation";
+import { IoChevronBack, IoChevronForward } from "react-icons/io5";
+import { Link, useLoaderData, useParams } from "react-router";
 
 const fadeInUp = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 30 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
 };
 
 const Projects = () => {
+  const projects = useLoaderData();
+
   return (
     <motion.section
+      id="projects"
+      className="bg-[#0F172A] text-white py-16 scroll-mt-24"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      id="projects"
-      className="bg-[#18212F] text-white py-16 scroll-mt-22"
     >
       <div className="w-11/12 mx-auto text-center">
-        <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+        <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
           Featured Projects
         </h2>
-        <div className="mx-auto mt-2 h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-        <p className="text-gray-400 mb-10 mt-4">
-          A showcase of my recent work, demonstrating various skills and
-          technologies
+        <p className="text-gray-400 mt-4 mb-10 max-w-xl mx-auto">
+          Explore some of my highlighted work, showcasing skills across
+          full-stack web development.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-10">
-          {projects.map((project, idx) => (
-            <div
-              key={idx}
-              className="card bg-[#151c2b] shadow-md rounded-lg overflow-hidden"
-            >
-              <figure className="relative">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover"
-                />
-                <span className="absolute top-3 right-3 bg-blue-600 text-xs text-white px-3 py-1 rounded-full">
-                  {project.tag}
-                </span>
-              </figure>
-              <div className="card-body">
-                <h3 className="text-lg font-semibold">{project.title}</h3>
-                <p className="text-sm text-gray-400">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mt-3">
-                  {project.stack.map((tech, i) => (
-                    <span
-                      key={i}
-                      className="badge badge-outline badge-sm text-gray-300 border-gray-600"
-                    >
-                      {tech}
-                    </span>
-                  ))}
+        <div className="max-w-5xl mx-auto">
+          <Swiper
+            modules={[Navigation, Autoplay]}
+            spaceBetween={50}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 3500,
+              disableOnInteraction: false,
+            }}
+            navigation={{ nextEl: ".next", prevEl: ".prev" }}
+            pagination={false}
+            className="relative"
+          >
+            {projects.map((project, idx) => (
+              <SwiperSlide key={idx}>
+                <div className="flex flex-col md:flex-row gap-10 items-center bg-[#1E293B] p-6 rounded-lg shadow-md">
+                  <div className="flex-shrink-0 w-full md:w-1/2">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="rounded-lg w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="w-full md:w-1/2 text-left">
+                    <h3 className="text-2xl font-bold text-pink-400 mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-300 mb-4 line-clamp-2">{project.description}</p>
+
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.stack.map((tech, i) => (
+                        <span
+                          key={i}
+                          className="bg-blue-500/20 text-blue-300 px-3 py-1 rounded-full text-sm"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    <div className="flex flex-wrap gap-4">
+                      <Link to={`/project-details/${project.id}`}>
+                        <button className="btn btn-outline border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white px-4">
+                          View Details <FaEye />
+                        </button>
+                      </Link>
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn btn-outline border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-4"
+                      >
+                        Live
+                        <FaExternalLinkAlt className="ml-2" />
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div className="mt-4 flex gap-4 text-sm text-gray-300">
-                  <a
-                    href={project.codeUrl}
-                    className="flex items-center gap-1 hover:text-purple-400"
-                  >
-                    <FaCode /> Code
-                  </a>
-                  <a
-                    href={project.liveUrl}
-                    className="flex items-center gap-1 hover:text-purple-400"
-                  >
-                    <FaExternalLinkAlt /> Live Demo
-                  </a>
-                </div>
-              </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+
+          {/* Bottom navigation arrows with spacing */}
+          <div className="mt-4 flex items-center justify-center gap-2">
+            <div className="prev cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 border border-gray-300 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-md ">
+              <IoChevronBack className="text-base" />
             </div>
-          ))}
+
+            <div className="custom-pagination flex gap-2 items-center justify-center"></div>
+
+            <div className="next cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center shadow-md">
+              <IoChevronForward className="text-base" />
+            </div>
+          </div>
         </div>
       </div>
     </motion.section>

@@ -1,0 +1,51 @@
+[
+  {
+    "id": 1,
+    "title": "Plant Manager",
+    "description": "A platform to manage plant care tasks with reminders and health tracking.This platform allows users to log, track, and manage care tasks for their houseplants. Users can add their plants, log watering/fertilizing dates, set reminders, and track plant health. The platform will support user authentication and personal plant data management.",
+    "image": "https://i.ibb.co/MD0phjSd/Plantera-Your-Ultimate-Plant-Care-Companion-06-29-2025-10-44-PM.png",
+    "stack": [
+      "React",
+      "TailwindCss",
+      "DaisyUi",
+      "Node.js",
+      "MongoDB",
+      "Firebase"
+    ],
+    "codeUrl": "https://github.com/srpinki/plantera-client",
+    "liveUrl": "https://elaborate-twilight-a1f44d.netlify.app/",
+    "challenges": [
+      "Ensuring secure user authentication and protected route access with JWT and Firebase.",
+      "Managing complex state across multiple components for plant data, reminders, and user roles.",
+      "Implementing responsive UI design that works seamlessly across mobile and desktop.",
+      "Handling role-based access for users and admins with dynamic dashboard rendering.",
+      "Optimizing MongoDB queries for fast retrieval of personalized plant data."
+    ],
+    "plans": [
+      "Add push notifications for watering/fertilizing reminders.",
+      "Create a calendar view for task tracking.",
+      "Introduce plant care tips based on plant type and season.",
+      "Enable community forum or user-shared plant care experiences."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Kormik",
+    "description": "An advanced job search and career platform with multiple search job matching.",
+    "image": "https://i.ibb.co/MD0phjSd/Plantera-Your-Ultimate-Plant-Care-Companion-06-29-2025-10-44-PM.png",
+    "stack": ["React.js", "TailwindCss", "Express.js", "MongoDB", "Firebase"],
+    "codeUrl": "https://github.com/yourrepo",
+    "liveUrl": "https://liveurl.com",
+    "challenges": [
+      "Secure authentication and authorization flow using JWT and Firebase.",
+      "Scalable job listing with filtering and search optimization.",
+      "Responsive UI for job seekers and recruiters.",
+      "Role-based access and dynamic dashboards.",
+      "Real-time messaging between users."
+    ],
+    "plans": [
+      "Add AI-based resume scoring system.",
+      "Integrate calendar scheduling for interviews."
+    ]
+  }
+]

@@ -16,18 +16,19 @@ const fadeInUp = {
 
 const Hero = () => {
   return (
-    <motion.div
+    <motion.section
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-      className="relative min-h-screen  overflow-hidden w-full inset-0 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/30"
+      id="home"
+      className="relative min-h-screen  overflow-hidden w-full bg-gray-900 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/30"
     >
       {/* Hero Section */}
-      <div id="home" className="flex flex-col-reverse md:flex-row justify-center items-center pt-24 w-11/12 mx-auto">
+      <div className="scroll-mt-24 flex flex-col-reverse md:flex-row justify-center items-center pt-24 w-11/12 mx-auto ">
         {/* Text Section */}
         <div className="flex-1 text-left">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white">
             Hi, I'm <br></br>
             <span className="bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
               Pinki Biswas
@@ -53,7 +54,7 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-8 flex gap-4">
-            <button className="btn btn-primary bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full px-6 py-2 flex items-center gap-2">
+            <button className="btn btn-primary bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-700 text-white rounded-full px-6 py-2 flex items-center gap-2">
               <FaDownload /> Download Resume
             </button>
             <a href="#projects">
@@ -121,7 +122,7 @@ const Hero = () => {
           </div>
         </div>
       </div>
-    </motion.div>
+    </motion.section>
   );
 };
 

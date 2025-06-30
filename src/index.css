@@ -4,6 +4,11 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+html {
+  scroll-behavior: smooth;
+}
+
+
 .manrope-font {
   font-family: "Manrope", sans-serif;
   font-optical-sizing: auto;

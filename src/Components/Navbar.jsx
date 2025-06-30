@@ -36,15 +36,15 @@ const Navbar = () => {
       : "px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:scale-105 hover:text-blue-400";
 
   return (
-    <nav className={`fixed top-0 left-0 w-full z-50 py-6 backdrop-blur-md transition-colors duration-300 ${scrolled ? 'bg-[#111827]' : 'bg-transparent'}`}>
+    <nav className={`fixed top-0 left-0 w-full z-50 py-6 backdrop-blur-md transition-colors duration-300 text-white ${scrolled ? 'bg-[#111827]' : 'bg-transparent'}`}>
       <div className="flex justify-between items-center w-11/12 mx-auto">
         <div className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent hover:scale-105 transition-transform cursor-pointer">
-        <a href="/">Pinki Biswas</a> 
+        <a href="#home">Pinki Biswas</a> 
         </div>
 
         {/* Desktop Menu */}
         <div className="space-x-6 hidden md:flex">
-          <a href="#" className={getLinkClass("home")}>Home</a>
+          <a href="#home" className={getLinkClass("home")}>Home</a>
           <a href="#about" className={getLinkClass("about")}>About</a>
           <a href="#skills" className={getLinkClass("skills")}>Skills</a>
           <a href="#projects" className={getLinkClass("projects")}>Projects</a>
