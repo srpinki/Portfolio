@@ -8,6 +8,7 @@ import {
 import Navbar from "./Navbar";
 import { Typewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import pinki from "/Pinki-Biswas.jpg";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 40 },
@@ -54,9 +55,12 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="mt-8 flex gap-4">
-            <button className="btn btn-primary bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-700 text-white rounded-full px-6 py-2 flex items-center gap-2">
-              <FaDownload /> Download Resume
-            </button>
+            <a href="/resume.pdf" download>
+              <button className="btn btn-primary bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-700 text-white rounded-full px-6 py-2 flex items-center gap-2">
+                <FaDownload /> Download Resume
+              </button>
+            </a>
+
             <a href="#projects">
               <button className="btn btn-outline border-white text-white hover:bg-white hover:text-black rounded-full px-6 py-2">
                 View My Work
@@ -93,12 +97,14 @@ const Hero = () => {
           </div>
 
           {/* Scroll Down Indicator */}
-          <div className="mt-10 text-center text-sm text-blue-300 absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
-            Scroll Down
-            <div className="animate-bounce text-blue-300 flex items-center justify-center mt-5 ">
-              <FaChevronDown size={25} />
+          <a href="#about">
+            <div className="mt-10 text-center text-sm text-blue-300 absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+              Scroll Down
+              <div className="animate-bounce text-blue-300 flex items-center justify-center mt-5 ">
+                <FaChevronDown size={25} />
+              </div>
             </div>
-          </div>
+          </a>
         </div>
 
         {/* Image Section */}
@@ -108,7 +114,7 @@ const Hero = () => {
             <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-gray-700 hover:border-blue-400 transition-all duration-500 group">
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20"></div>
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=400&h=400&fit=crop&crop=face"
+                src={pinki}
                 alt="Profile"
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />

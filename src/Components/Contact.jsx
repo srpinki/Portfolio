@@ -13,21 +13,23 @@ const fadeInUp = {
 const Contact = () => {
   return (
     <motion.section
-    initial="hidden"
+      initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={fadeInUp}
-    id="contact" className="scroll-mt-22 bg-[#111827] text-white py-16">
+      id="contact"
+      className="scroll-mt-22 bg-[#111827] text-white py-16"
+    >
       <div>
-          <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
-            Let's Work Together
-          </h2>
-          <div className="mx-auto mt-2 h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
-          <p className=" text-center text-sm text-gray-400 mt-4">
-            Have a project in mind? Let’s discuss how we can bring your ideas to
-            life
-          </p>
-        </div>
+        <h2 className="leading-[60px] text-4xl md:text-5xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400">
+          Let's Work Together
+        </h2>
+        <div className="mx-auto mt-2 h-1 w-24 bg-gradient-to-r from-blue-400 to-purple-400 rounded-full"></div>
+        <p className=" text-center text-sm text-gray-400 mt-4">
+          Have a project in mind? Let’s discuss how we can bring your ideas to
+          life
+        </p>
+      </div>
       <div className="w-11/12 mx-auto grid md:grid-cols-2 gap-10 mt-10">
         {/* Left Side - Contact Info */}
         <div>
@@ -53,7 +55,7 @@ const Contact = () => {
             </div>
             <div className="flex items-center gap-4">
               <div className="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-600 rounded-lg flex items-center justify-center">
-                <FaPhoneAlt size={25}/>
+                <FaPhoneAlt size={25} />
               </div>
               <div>
                 <p className="text-sm text-gray-400">Whats app</p>
@@ -74,10 +76,16 @@ const Contact = () => {
 
         {/* Right Side - Contact Form */}
         <div className="bg-gray-900/50 p-8 rounded-xl border border-gray-700">
-          <form className="space-y-4">
+          <form
+            action="https://formsubmit.co/pinkibiswasit@gmail.com
+"
+            method="POST"
+            className="space-y-4"
+          >
             <div>
               <label className="label text-sm font-medium">Name</label>
               <input
+              name="name"
                 type="text"
                 placeholder="Enter your name"
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300"
@@ -86,6 +94,7 @@ const Contact = () => {
             <div>
               <label className="label text-sm font-medium">Email</label>
               <input
+              name="email"
                 type="email"
                 placeholder="Enter your email"
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300"
@@ -94,6 +103,7 @@ const Contact = () => {
             <div>
               <label className="label text-sm font-medium">Message</label>
               <textarea
+              name="message"
                 className="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg focus:outline-none focus:border-blue-500 transition-colors duration-300"
                 rows="4"
                 placeholder="Tell me about your project..."
