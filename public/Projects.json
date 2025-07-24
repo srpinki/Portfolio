@@ -1,7 +1,7 @@
 [
   {
     "id": 2,
-    "title": "WorkPulse IT",
+    "title": "WorkPulse",
     "description": "A full-stack platform for tracking employee workflows, managing payroll, and streamlining HR operations. WorkPulse IT allows employees to log daily work updates, while HR and admin users can handle payrolls, process Stripe payments, and manage internal operations with protected access.",
     "image": "https://i.ibb.co/WW100PWV/workpulse.png",
     "stack": [

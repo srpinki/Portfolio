@@ -26,8 +26,8 @@ const technologies = [
   { name: "JavaScript", color: "text-yellow-400" },
   { name: "Node.js", color: "text-green-400" },
   { name: "MongoDB", color: "text-green-500" },
-  { name: "Tailwind", color: "text-cyan-400" },
-  { name: "Firebase", color: "text-orange-400" },
+  { name: "Firebase", color: "text-cyan-400" },
+  { name: "WordPress", color: "text-orange-400" },
 ];
 
 const fadeInUp = {
