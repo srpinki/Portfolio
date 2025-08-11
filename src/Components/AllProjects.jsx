@@ -58,7 +58,7 @@ const AllProjects = () => {
         </p>
       </div>
       {/* Tabs */}
-      <div className="flex justify-center space-x-3 mb-10 overflow-x-auto">
+      <div className="flex flex-col md:flex-row md:justify-center md:space-x-3 gap-3 mb-10 overflow-x-auto md:overflow-visible">
         {categoryCounts.map((tab) => (
           <button
             key={tab.label}
@@ -132,7 +132,7 @@ const AllProjects = () => {
         ))}
       </div>
       <div className="flex justify-center ">
-        <Link to={"/"} className="flex items-center btn btn-outline border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-4 mt-12">
+        <Link to={"/"} className="flex items-center btn btn-outline border-blue-500 text-blue-400 hover:bg-blue-500 hover:text-white px-4 mt-12 rounded-full">
           <IoIosArrowRoundBack size={24} />
           Back to home
         </Link>
