@@ -127,7 +127,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="max-w-4xl mx-auto bg-gradient-to-r from-gray-900/50 to-gray-800/50 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm text-center"
+          className="w-11/12 mx-auto bg-gradient-to-r from-gray-900/50 to-gray-800/50 p-8 rounded-2xl border border-gray-700 backdrop-blur-sm text-center"
         >
           <h3 className="text-2xl font-semibold text-blue-400 mb-6">
             Core Technologies

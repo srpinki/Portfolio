@@ -5,6 +5,7 @@ import {
   FaChevronLeft,
   FaChevronRight,
   FaEye,
+  FaFolderOpen,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -64,10 +65,12 @@ const Projects = () => {
                     />
                   </div>
                   <div className="w-full md:w-1/2 text-left">
-                    <h3 className="text-2xl font-bold text-pink-400 mb-2">
+                    <h3 className="text-2xl font-bold text-blue-400 mb-2">
                       {project.title}
                     </h3>
-                    <p className="text-gray-300 mb-4 line-clamp-2">{project.description}</p>
+                    <p className="text-gray-300 mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
 
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.stack.map((tech, i) => (
@@ -114,6 +117,14 @@ const Projects = () => {
               <IoChevronForward className="text-base" />
             </div>
           </div>
+        </div>
+        <div className="mt-12">
+          <Link to={"/all-projects"}>
+            <button className=" py-5 px-8 btn rounded-full cursor-pointer bg-gradient-to-r from-blue-500 to-purple-500 text-white hover:scale-105 transition-transform">
+              <FaFolderOpen className="w-5 h-5" />
+              View All Projects
+            </button>
+          </Link>
         </div>
       </div>
     </motion.section>

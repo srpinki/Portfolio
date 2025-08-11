@@ -7,6 +7,7 @@ import {
   RouterProvider,
 } from "react-router";
 import ProjectDetails from './Components/ProjectDetails .jsx';
+import AllProjects from './Components/AllProjects.jsx';
 
 const router = createBrowserRouter([
   {
@@ -17,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/project-details/:id",
     Component: ProjectDetails,
+    loader: () => fetch('../Projects.json')
+  },
+  {
+    path: "/all-projects",
+    Component: AllProjects,
     loader: () => fetch('../Projects.json')
   }
 ]);
